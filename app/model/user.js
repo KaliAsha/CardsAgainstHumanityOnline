@@ -36,4 +36,4 @@ User.prototype.save = function(){
     });
 }
 
-module.exports = Room;
+module.exports = User;
