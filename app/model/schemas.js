@@ -16,7 +16,7 @@ var roomSchema = new mongoose.Schema({
     players : [userSchema],
     author : userSchema,
     checksum : String,
-    visibility : { type: Number, min: 0, max: 2, default: 0 }
+    visibility : { type: Number, min: 0, max: 1, default: 0 }
 })
 
 roomSchema.methods.updateTracks = function(callback){

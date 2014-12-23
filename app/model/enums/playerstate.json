@@ -1,0 +1,5 @@
+{
+    "PLAYER":0,
+    "DEALER":1,
+    "SPECTATOR":2
+}

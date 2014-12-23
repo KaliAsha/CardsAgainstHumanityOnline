@@ -1,5 +1,6 @@
 {
-	"vars":{
-		"site_url":"http://cah.vchabrette.fr"
-	}
+  "vars":{
+	"site_url":"http://cah.vchabrette.fr",
+	"bdd":"cah"
+  }
 }
