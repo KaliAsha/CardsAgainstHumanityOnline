@@ -1,7 +1,7 @@
 Cards Against Humanity Online
 =============================
 
-An online (HTML/CSS/JS) portage of the card game Cards Against Humanity.
+An online (HTML/CSS/JS) portage of the card game (Cards Against Humanity)[http://cardsagainsthumanity.com/].
 
 Team
 ----
