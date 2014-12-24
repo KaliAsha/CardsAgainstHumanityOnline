@@ -1,7 +1,3 @@
-//console.log(api);
-var services = require('../controller/services.js');
-var opts = require('../config/opts.json');
-var GameManager = require('./gamemanager.js');
 var Visibility = require('./enums/visibility.json');
 
 function Room(id, name, author, visibility){
