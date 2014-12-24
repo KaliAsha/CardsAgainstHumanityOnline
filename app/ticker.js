@@ -4,8 +4,8 @@ function Ticker(ds){
     this.interval = null;
 
     this.start = function(cb){
-        if(this.interval!=null) {
-            this.interval = setInterval(this.tick(cb), this.ds);
+        if(this.interval==null) {
+            this.interval = setInterval(this.tick, this.ds, cb);
         }else{
             cb(new Error('Ticker already started'));
         }
