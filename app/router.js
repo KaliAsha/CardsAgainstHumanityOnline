@@ -4,6 +4,8 @@ var opts = require('./config/opts.json');
 var TwitterStrategy = require('passport-twitter').Strategy;
 var df = require('date-fu');
 
+var rooms = new Array();
+
 module.exports = function(app, passport){
   // PASSPORT
 
@@ -55,7 +57,7 @@ module.exports = function(app, passport){
 
   app.get('/', function(req, res){
     //res.locals.user = req.user || null;
-    res.render('index');
+    res.render('index', {server_url: __server_ip});
   });
 
   app.get('/auth/twitter', passport.authenticate('twitter'));
