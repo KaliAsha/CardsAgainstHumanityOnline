@@ -1,40 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="mobile-web-app-capable" content="yes">
-    <title>Le ChatBrette</title>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="theme-color" content="black">
+		<title>CardsAgainstHumanityOnline</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/icons.css">
+		<link rel="icon" type="image/png" href="#.png" />
+		<!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="#.ico" /><![endif]-->
+		<script src="bower/angular/angular.min.js"></script>
+	</head>
 
-    <!-- Bootstrap -->
-    <link rel="stylesheet" type="text/css" href="../css/style-login.css">
-    <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="../css/flat-ui.css">
-    <link rel="stylesheet" type="text/css" href="../css/social-btns.css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="jumbotron">
-      <div class="container">
-        <h1>Le ChatBrette</h1>
-        <div class="col-md-4">
-          <p><a href="auth/twitter" class="btn btn-block btn-social btn-lg btn-twitter">
-          <i class="fa fa-twitter"></i> Se connecter avec Twitter</a>
-        </div>
-      </a></p>
-      </div>
-    </div>
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-  </body>
+	<body>
+		<section class="menu">
+			<nav>
+				<ul class="back">
+					<li><a href="#" class="icon-back" title="Retour"></a></li>
+				</ul>
+				<ul class="player_info">
+					<li class="player_name">Salut <span>Player2</span> !</li>
+					<li><a href="#" class="icon-off" title="Déconnexion"></a></li>
+				</ul>
+			</nav>
+		</section>
+		<h1 class="room_name">Room <span>#room</span></h1>
+		<section class="ranking">
+			<aside>
+				<h1>Le premier arrivé à 20pts gagne le round</h1>
+				<ul>
+					<li>player1</li>
+					<li>player2</li>
+					<li>player3</li>
+					<li>player4</li>
+					<li>player5</li>
+				</ul>
+				<ul class="points">
+					<li>15pts</li>
+					<li>2pts</li>
+					<li>10pts</li>
+					<li>7pts</li>
+					<li>3pts</li>
+				</ul>
+			</aside>
+			<h1 class="round">Round 3</h1>
+			<h2 class="ask_player">Player3 vous pose une question :</h2>
+			<p class="ask">#42 - Flagrans et enim speculationibus respectu vesania sollemni ferrum agiliter celeri ?</p>
+		</section>
+		<section class="replies">
+			<h3 class="choice">Choisir une réponse :</h3>
+			<ul>
+				<li class="reply">Flagrans et enim speculationibus respectu vesania sollemni ferrum agiliter celeri</li>
+				<li class="reply">Flagrans et enim speculationibus respectu vesania sollemni ferrum agiliter celeri</li>
+				<li class="reply">Flagrans et enim speculationibus respectu vesania sollemni ferrum agiliter celeri</li>
+				<li class="reply">Flagrans et enim speculationibus respectu vesania sollemni ferrum agiliter celeri</li>
+				<li class="reply">Flagrans et enim speculationibus respectu vesania sollemni ferrum agiliter celeri</li>
+				<li class="reply">Flagrans et enim speculationibus respectu vesania sollemni ferrum agiliter celeri</li>
+				<li class="reply">Flagrans et enim speculationibus respectu vesania sollemni ferrum agiliter celeri</li>
+				<li class="reply">Flagrans et enim speculationibus respectu vesania sollemni ferrum agiliter celeri</li>
+				<li class="reply">Flagrans et enim speculationibus respectu vesania sollemni ferrum agiliter celeri</li>
+				<li class="reply">Flagrans et enim speculationibus respectu vesania sollemni ferrum agiliter celeri</li>
+			</ul>
+			<input type="button" value="Envoyer" />
+		</section>
+	</body>
 </html>

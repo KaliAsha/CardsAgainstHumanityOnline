@@ -1,6 +1,7 @@
 {
-  "vars":{
-	"site_url":"http://cah.vchabrette.fr",
-	"bdd":"cah"
-  }
+    "vars":{
+        "site_url":"http://cah.vchabrette.fr",
+        "port":8087,
+        "bdd":"cah"
+    }
 }

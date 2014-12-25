@@ -1,12 +1,8 @@
-var credentials = require('./app/config/credentials.json');
+var credentials = require('./config/credentials.json');
 var opts = require('./config/opts.json');
 
 var TwitterStrategy = require('passport-twitter').Strategy;
-var bddjs = require('./bdd.js');
-var oauth = require('./oauth.js');
 var df = require('date-fu');
-
-
 
 module.exports = function(app, passport){
   // PASSPORT
@@ -20,9 +16,9 @@ module.exports = function(app, passport){
   });
 
   var twitterStrategy = new TwitterStrategy({
-    consumerKey: opts.twitter_api.consumerKey,
-    consumerSecret: opts.twitter_api.consumerSecret,
-    callbackURL: __server_ip+opts.twitter_api.callbackURL
+    consumerKey: credentials.twitter_api.consumerKey,
+    consumerSecret: credentials.twitter_api.consumerSecret,
+    callbackURL: __server_ip+credentials.twitter_api.callbackURL
   },
   function(token, tokenSecret, profile, done) {
     console.log("["+df.strftime(new Date(), '%T')+"] @"+profile.username+" logged in.");
@@ -57,15 +53,6 @@ module.exports = function(app, passport){
 
   // ROUTE
 
-  /*app.get('/room/:id', function(req, res){
-    var room = global.rooms[req.params.id];
-    if(room){
-      res.render('test', {room: room, server_url: "http://"+__server_ip});
-    }else{
-      console.log('Unknown room');
-    }
-  });*/
-
   app.get('/', function(req, res){
     //res.locals.user = req.user || null;
     res.render('index');
@@ -75,10 +62,6 @@ module.exports = function(app, passport){
 
   app.get('/auth/return', passport.authenticate('twitter') ,function(req, res){
     res.redirect('/');
-  });
-
-  app.get('/user/:username', function(req, res){
-    res.render('user', {username:req.params.username});
   });
   
   app.get('/logout', function(req, res){
@@ -95,14 +78,6 @@ function loggedIn(req, res, next) {
   } else {
     req.session.room = req.params.id;
     res.redirect('/auth/twitter/return');
-  }
-};
-
-function loggedInAPI(req, res, next) {
-  if (req.user) {
-    next();
-  } else {
-    res.send(403, "You are not logged in.");
   }
 };
 
