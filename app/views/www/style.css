@@ -147,10 +147,26 @@ table
 {
 	margin: auto;
 	margin-top: 50px;
+	border-collapse: collapse;
 }
 
 td, th
 {
-	padding-right: 20px;
+	padding-right: 30px;
+	padding-left: 2px;
 	text-align: left;
+}
+
+tr:hover
+{
+	color: white;
+	background-color: black;
+	cursor: pointer;
+}
+
+.hover:hover
+{
+	color: black;
+	background-color: white;
+	cursor: text;
 }
