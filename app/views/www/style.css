@@ -1,0 +1,156 @@
+*
+{
+	margin: 0;
+	padding: 0;
+	border: none;
+	font-family: Calibri, Sans-Serif;
+	max-width: 100%;
+	outline-style: none;
+	font-size: 25px;
+	list-style: none;
+}
+
+a, a:active, a:visited
+{
+	font-size: 25px;
+	color: white;
+	text-decoration: none;
+}
+
+.menu
+{
+	background-color: black;
+	height: 70px;
+	top: 0;
+	width: 100%;
+}
+
+nav
+{
+	display: inline-block;
+	color: white;
+}
+
+nav li
+{
+	display: inline-block;
+}
+
+.back
+{
+	position: absolute;
+	top: 18px;
+	color: white;
+	margin-left: 15px;
+	cursor: pointer;
+}
+
+.player_info
+{
+	position: absolute;
+	right: 20px;
+	top: 18px;
+}
+
+.player_name, .player_name span
+{
+	font-size: 20px;
+}
+
+.icon-off
+{
+	margin-left: 30px;
+}
+
+.icon-off:hover
+{
+	text-decoration: none;
+}
+
+.cards_white
+{
+	width: 60px;
+	height: 100px;
+	margin: auto;
+	background-color: white;
+	border-radius: 5px;
+	position: relative;
+	right: 20px;
+	
+	transform: rotateZ(-20deg);
+	-webkit-transform: rotateZ(-15deg);
+	-moz-transform: rotateZ(-20deg);
+	-o-transform: rotateZ(-20deg);
+	-ms-transform: rotateZ(-20deg);
+}
+
+.cards_black
+{
+	width: 60px;
+	height: 100px;
+	margin: auto;
+	border-radius: 5px;
+	border: 2px white solid;
+	position: relative;
+	bottom: 100px;
+	left: 20px;
+	
+	transform: rotateZ(20deg);
+	-webkit-transform: rotateZ(15deg);
+	-moz-transform: rotateZ(20deg);
+	-o-transform: rotateZ(20deg);
+	-ms-transform: rotateZ(20deg);
+}
+
+.header
+{
+	background-color: black;
+	text-align: center;
+	padding-bottom: 40px;
+}
+
+.header aside
+{
+	height: 140px;
+}
+
+.header h1
+{
+	color: white;
+	font-weight: normal;
+}
+
+.rules
+{
+	position: relative;
+	right: 300px;
+}
+
+.create_room
+{
+	position: relative;
+	left: 300px;
+}
+
+.header a
+{
+	text-decoration: underline;
+	color: white;
+}
+
+.header li
+{
+	display: inline-block;
+}
+
+table
+{
+	margin: auto;
+	margin-top: 50px;
+}
+
+td, th
+{
+	padding-right: 20px;
+	text-align: left;
+}
