@@ -6,436 +6,283 @@
 	font-family: Calibri, Sans-Serif;
 	max-width: 100%;
 	outline-style: none;
+}
+
+#menu
+{
+	background-color: #e5e5e5;
+	height: 100px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	text-align: center;
+	z-index: 40;
+	border-bottom: 2px #148c98 solid;
+}
+
+nav
+{
+	width: 80%;
+	display: inline-block;
+	height: 85px;
+}
+
+li
+{
+	display: inline-block;
+}
+
+#menu_links
+{
+	position: absolute;
+	top: 34px;
+}
+
+#connection
+{
+	position: absolute;
+	right: 10%;
+	top: 34px;
+}
+
+.special
+{
 	font-size: 25px;
-	list-style: none;
+	color: #148c98;
+}
+
+#pseudo
+{
+	text-decoration: underline;
+}
+
+span, #menu h1
+{
+	font-size: 25px;
+	color: #148c98;
+	font-weight: normal;
 }
 
 a, a:active, a:visited
 {
 	font-size: 25px;
-	color: white;
+	color: #148c98;
 	text-decoration: none;
 }
 
-.menu
+a:hover
 {
-	background-color: black;
-	height: 70px;
-	top: 0;
-	width: 100%;
-}
-
-nav
-{
-	display: inline-block;
-	color: white;
-}
-
-nav li
-{
-	display: inline-block;
-}
-
-.back
-{
-	position: absolute;
-	top: 18px;
-	color: white;
-	margin-left: 15px;
+	color: #1955b7;
 	cursor: pointer;
 }
 
-.player_info
+input:hover, #game p:hover, noscript p:hover
 {
-	position: absolute;
-	right: 20px;
-	top: 18px;
+	color: #1955b7;
+	background-color: #dbdbdb;
 }
 
-.player_name, .player_name span
+a:focus, input:focus
 {
-	font-size: 20px;
+	border: 1px black dashed;
 }
 
-.icon-off
+#title_menu
 {
-	margin-left: 30px;
+	display: none;
 }
 
-.cards_white
+footer
 {
-	width: 60px;
-	height: 100px;
-	margin: auto;
-	background-color: white;
-	border-radius: 5px;
-	position: relative;
-	right: 20px;
-	
-	transform: rotateZ(-20deg);
-	-webkit-transform: rotateZ(-15deg);
-	-moz-transform: rotateZ(-20deg);
-	-o-transform: rotateZ(-20deg);
-	-ms-transform: rotateZ(-20deg);
-}
-
-.cards_black
-{
-	width: 60px;
-	height: 100px;
-	margin: auto;
-	border-radius: 5px;
-	border: 2px white solid;
-	position: relative;
-	bottom: 100px;
-	left: 20px;
-	
-	transform: rotateZ(20deg);
-	-webkit-transform: rotateZ(15deg);
-	-moz-transform: rotateZ(20deg);
-	-o-transform: rotateZ(20deg);
-	-ms-transform: rotateZ(20deg);
-}
-
-.header
-{
-	background-color: black;
+	background-color: #e5e5e5;
+	padding-top: 40px;
 	text-align: center;
-	padding-bottom: 40px;
+	height: 70px;
+	border-top: 2px #148c98 solid;
 }
 
-.header aside
+input, noscript p
 {
-	height: 140px;
+	background-color: #e5e5e5;
+	border: none;
+	color: #148c98;
+	width: 200px;
+	height: 100px;
+	font-family: Calibri,Sans-Serif;
+	font-size: 25px;
+	padding: 5px;
+	word-wrap: break-word;
+	outline-style: none;
+	cursor: pointer;
+	box-shadow: 0px 5px 0px #ccc;
 }
 
-.header h1
+#nojs
 {
-	color: white;
-	font-weight: normal;
+	display: initial !important;
 }
 
-.rules
+#game
 {
-	position: relative;
-	right: 300px;
+	padding-top: 334px;
+	padding-bottom: 283px;
+	text-align: center;
 }
 
-.create_room
+#game p
 {
-	position: relative;
-	left: 300px;
-}
-
-.header a
-{
-	text-decoration: underline;
-	color: white;
-}
-
-.header li
-{
-	display: inline-block;
-}
-
-table
-{
+	font-family: Calibri,Sans-Serif;
+	font-size: 23px;
+	width: 383px;
 	margin: auto;
-	margin-top: 50px;
-	border-collapse: collapse;
-}
-
-td, th
-{
-	padding-right: 30px;
-	padding-left: 2px;
-	text-align: left;
+	color: #148c98;
+	background-color: #e5e5e5;
+	padding: 10px;
+	text-align: center;
+	margin-bottom: 10px;
+	box-shadow: 0px 5px 0px #ccc;
 	cursor: pointer;
 }
 
-tr:not(:first-child):hover
+#rand
 {
-	color: white;
-	background-color: black;
-	cursor: pointer;
+	vertical-align: top;
 }
 
-.hover:hover
+@media only screen and (max-width: 485px)
 {
-	color: black;
-	background-color: white;
-	cursor: text;
-}
-
-@media only screen and (max-width: 1550px)
-{
-	.header li
+	#game
 	{
+		padding-top: 280px;
+		padding-bottom: 200px;
+	}
+
+	#game p
+	{
+		width: 263px;
+	}
+
+	input
+	{
+		width: 140px;
+	}
+}
+
+@media only screen and (max-width: 1100px)
+{
+	#title_menu
+	{ 
 		display: block;
+		padding-top: 25px;
+		font-size: 35px !important;
 	}
 	
-	.rules
-	{
-		position: static;
-	}
-
-	.create_room
-	{
-		position: static;
-	}
-}
-
-@media (max-width: 870px)
-{
-	.rooms td:before
-	{
-		content: attr(data-title);
-	}
-	
-	.hover
+	nav span
 	{
 		display: none;
 	}
 	
-	table, th, td, tr
-	{ 
-		display: block; 
-	}
-	
-	td, tr
+	nav
 	{
 		width: 100%;
+		display: block;
+	}
+
+	#menu li
+	{
+		display: block;
+		background-color: #e5e5e5;
+		border-bottom: 2px #148c98 solid;
+		padding: 15px;
+		
 	}
 	
-	tr:hover
+	#menu li:hover
 	{
-		background-color: black	!important;
+		background-color: #dbdbdb;
 	}
 	
-	td:nth-child(5)
+	.under
 	{
-		margin-bottom: 50px;
+		border-top: 2px #148c98 solid;
 	}
 	
-	td
+	#under_bottom
 	{
-		float: left;
+		border-bottom: 4px #148c98 solid !important;
+	}
+	
+	#menu_links
+	{
 		position: relative;
-		padding-right: 0;
-		white-space: normal;
-		text-align: right;
+		text-align: center;
+		right: 0;
+		top: 0;
+		margin-top: 34.5px;
 	}
 	
-	td:before
+	#connection
+	{
+		position: relative;
+		right: 0;
+		top: 0;
+	}
+	
+	nav.is-closed ul
+	{
+		max-height: 0;
+		overflow: hidden;
+	}
+	
+	nav > button
 	{
 		position: absolute;
-		top: 0px;
-		left: 0px;
-		width: 45%;
-		padding-right: 15px;
-		height: 100%;
-		white-space: nowrap;
-		text-align: left;
-	}
-}
-
-.border
-{
-	font-size: 60px;
-	position: relative;
-	top: -18px;
-	right: 20px;
-}
-
-.border1
-{
-	font-size: 60px;
-	position: relative;
-	top: 28px;
-	left: 150px;
-}
-
-.room_name
-{
-	font-size: 40px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	text-align: center;
-}
-
-.room_name span
-{
-	font-size: 40px;
-}
-
-.ranking
-{
-	background-color: black;
-	color: white;
-	text-align: center;
-	font-size: 30px;
-}
-
-.ranking aside
-{
-	opacity: .5;
-	text-align: left;
-	width: 200px;
-	position: absolute;
-	margin-left: 25px;
-	padding-top: 25px;
-}
-
-aside h1
-{
-	font-size: 18px;
-	margin-bottom: 20px;
-}
-
-aside li
-{
-	font-size: 18px;
-}
-
-.points
-{
-	position: absolute;
-	top: 90px;
-	left: 90px;
-}
-
-.round
-{
-	font-size: 35px;
-	padding-top: 25px;
-	margin-bottom: 30px;
-	font-weight: normal;
-}
-
-.ask_player
-{
-	font-size: 30px;
-	margin-bottom: 20px;
-	font-weight: normal;
-}
-
-.ask
-{
-	text-align: left;
-	width: 615px;
-	margin: auto;
-	font-size: 30px;
-	padding-bottom: 25px;
-	line-height: 30px;
-}
-
-.replies
-{
-	background-color: white;
-	color: black;
-	text-align: center;
-	padding-top: 20px;
-}
-
-.choice
-{
-	position: absolute;
-	left: 50px;
-}
-
-.reply
-{
-	width: 850px;
-	margin: auto;
-}
-
-.reply:hover
-{
-	color: white;
-	background-color: black;
-	cursor: pointer;
-}
-
-input
-{
-	background-color: black;
-	border: none;
-	color: white;
-	width: 100px;
-	height: 35px;
-	padding-bottom: 3px;
-	font-size: 25px;
-	word-wrap: break-word;
-	cursor: pointer;
-	position: absolute;
-	right: 200px;
-	bottom: 20px;
-	transition-property: color;
-	transition-duration: 1s;
-}
-
-input:hover
-{
-	background-color: white;
-	color: black;
-	border: 2px solid black;
-}
-
-@media only screen and (max-width: 1500px)
-{
-	.ask
-	{
-		text-align: center;
+		top: 18px;
+		right: 18px;
+		z-index: 1;
+		height: 4rem;
+		width: 4rem;
+		background-color: transparent;
+		padding: 0;
+		outline: 0;
+		border: 1px solid #148c98;
+		border-radius: 50%;
+		cursor: pointer;
+		-webkit-transition: -webkit-transform .2s;
+		transition: transform .2s;
 	}
 	
-	.choice
+	nav > button::-moz-focus-inner
 	{
-		position: static;
-		margin-bottom: 10px;
+		border: 0;
 	}
 	
-	.reply
+	nav > button::after, nav > button::before
 	{
-		margin-bottom: 20px;
+		content: "";
+		position: absolute;
+		top: 15%;
+		right: 40%;
+		bottom: 15%;
+		left: 40%;
+		background-color: #148c98;
+		border-radius: 10px;
+		-webkit-transition: -webkit-transform .2s;
+		transition: transform .2s;
 	}
 	
-	input
+	nav > button::before
 	{
-		position: static;
-		margin-top: 20px;
-		margin-bottom: 20px;
+		top: 40%;
+		right: 15%;
+		bottom: 40%;
+		left: 15%;
 	}
-}
-
-@media only screen and (max-width: 1000px)
-{
-	.ranking aside
+		
+	nav:not(.is-closed) > button, nav:not(.is-closed) > button::before
 	{
-		position: static;
-		display: block;
-		height: auto;
-		text-align: center;
-		width: 100%;
-		margin-left: 0;
-	}
-	
-	aside ul
-	{
-		display: inline-block;
-	}
-	
-	.points
-	{
-		position: static;
-		margin-left: 20px;
-		text-align: left;
-	}
-}
-
-@media only screen and (max-width: 800px)
-{
-	.menu nav
-	{
-		margin: auto;
+		-webkit-transform: rotate(90deg) translateZ(0);
+		-ms-transform: rotate(90deg) translateZ(0);
+		transform: rotate(90deg) translateZ(0);
 	}
 }

@@ -32,14 +32,14 @@
 				<div class="cards_black"></div>
 			</aside>
 			<ul>
-				<li><a href="#" class="rules">Règles du jeu</a></li>
-				<li><h1 class="">CardAgainstHumanityOnline</h1></li>
-				<li><a href="#" class="create_room">Créer une salle</a></li>
+				<li><h1 class="logo">CardAgainstHumanityOnline</h1></li>
+				<li class="li"><a href="#" class="rules">Règles du jeu</a><span> - </span></li>
+				<li class="li"><a href="#" class="create_room">Créer une salle</a></li>
 			</ul>
 		</section>
 		<section class="rooms" ng-show="!loading && currPage === 'index'">
 			<table>
-				<tr>
+				<tr class="hover">
 					<th>ID</th>
 					<th>Nom</th>
 					<th>Créateur</th>
@@ -47,11 +47,11 @@
 					<!--<th>Disponibilité</th>-->
 				</tr>
 				<tr ng-repeat="room in rooms">
-					<td>{{ room._id }}</td>
-					<td>{{ room.name }}</td>
-					<td>{{ room.creator }}</td>
-					<td>{{ room.players.length }}</td>
-					<!--<td>{{ true }}</td>-->
+					<td data-title="ID">{{ room._id }}</td>
+					<td data-title="Nom">{{ room.name }}</td>
+					<td data-title="Créateur">{{ room.creator }}</td>
+					<td data-title="Nb de joueurs">{{ room.players.length }}</td>
+					<!--<td data-title="Disponibilité">{{ true }}</td>-->
 				</tr>
 			</table>
 		</section>
