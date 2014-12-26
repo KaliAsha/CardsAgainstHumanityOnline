@@ -2,8 +2,10 @@ var credentials = require('./config/credentials.json');
 var opts = require('./config/opts.json');
 
 var TwitterStrategy = require('passport-twitter').Strategy;
-var df = require('date-fu');
 
+var User = require('./model/user.js');
+
+var users = new Array();
 var rooms = new Array();
 
 module.exports = function(app, passport){
@@ -23,32 +25,21 @@ module.exports = function(app, passport){
     callbackURL: __server_ip+credentials.twitter_api.callbackURL
   },
   function(token, tokenSecret, profile, done) {
-    console.log("["+df.strftime(new Date(), '%T')+"] @"+profile.username+" logged in.");
+    console.log(global.df.logtime()+" @"+profile.username+" logged in.");
 
     var user = {};
 
     var tmp_user = {
+      _id: profile._json.id,
       token: token,
       tokenSecret: tokenSecret,
       username: profile.username,
-      name: profile.displayName,
+      name: profile._json.name,
       avatar: profile.photos[0].value.replace("_normal", ""),
       banner: (typeof profile._json.profile_banner_url!=='undefined'?profile._json.profile_banner_url:"")
     }
 
-
-
-    UserModel.findOneAndUpdate(
-      {_id: profile.id},
-      tmp_user,
-      {upsert:true},
-      function(err, user){
-        if (err) {
-          console.log(err);
-        }
-        done(null,user);
-      }
-    );
+    users.push(new User(tmp_user, done));
   });
 
   passport.use(twitterStrategy);

@@ -3,7 +3,6 @@ var Visibility = require('./enums/visibility.json');
 function Room(id, name, author, visibility){
     this._id = id;
     this.name = name;
-    this.game = new GameManager();
     this.creatorId = creatorId || null;
     this.visibility = visibility || Visibility.PUBLIC;
     this.creationDate = date || new Date();
@@ -14,7 +13,7 @@ function Room(id, name, author, visibility){
 }
 
 Room.prototype.save = function(){
-    var collec = globals.mongo.collection(this.COLLECTION);
+    var collec = global.mongo.collection(this.COLLECTION);
 
     var data = {
         _id: this.id,
@@ -28,6 +27,10 @@ Room.prototype.save = function(){
         // Returns a new document (array).
         console.log(results);
     });
+}
+
+Room.prototype.load = function (id){
+
 }
 
 module.exports = Room;

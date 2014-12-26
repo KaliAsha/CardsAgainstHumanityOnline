@@ -19,7 +19,17 @@ var app = express();
 var server = http.createServer(app);
 var io = require('socket.io').listen(server);
 
-global.mongo = new easymongo({dbname: opts.vars.bdd});
+global.df = require('date-fu');
+global.df.logtime = function(){
+	return "["+global.df.strftime(new Date(), '%T')+"]";
+}
+
+var mongo = new easymongo({dbname: opts.vars.bdd});
+global.mongo = {db : mongo};
+global.mongo.collections = {
+	users : mongo.collection("users"),
+	rooms : mongo.collection("rooms")
+}
 
 // personal vars
 df = require('date-fu');
@@ -43,7 +53,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 server.listen(app.get('port'));
 
-__server_ip = (process.argv[2]=="local"?'localhost:'+app.get('port'):otps.var.site_url);
+__server_ip = (process.argv[2]=="local"?'http://localhost:'+app.get('port'):otps.var.site_url);
 
 require('./app/router.js')(app, passport);
 require('./app/io.js')(io);
