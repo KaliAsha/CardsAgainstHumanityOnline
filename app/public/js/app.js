@@ -5,7 +5,9 @@ var angularSioResolver = ['$q', '$timeout', '$route', angularSio];
 function angularSio($q, $timeout, $route){
   var delay = $q.defer();
   console.log('angularXhr', $route);
-  socket.emit('routeChange', 'bla');
+  socket.emit('routeChange', 'bla', function(data){
+    delay.resolve(data);
+  });
 
 /*
   $http.get(getXhrUrl($route)).
@@ -20,7 +22,7 @@ function angularSio($q, $timeout, $route){
 */
   setTimeout(function(){
     delay.resolve({});
-  }, 100);
+  }, 1);
   return delay.promise;
 }
 
@@ -76,9 +78,8 @@ app
     });
 
     $scope.$on("$routeChangeStart", function(event, next, current){
-      if(next)
-        $scope.toto = next.controller;
-      else{
+      if(next){
+      }else{
         document.location.href = $location.url();
       }
     });
