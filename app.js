@@ -53,7 +53,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 server.listen(app.get('port'));
 
-__server_ip = (process.argv[2]=="local"?'http://localhost:'+app.get('port'):otps.var.site_url);
+__server_ip = (process.argv[2]=="local"?'http://localhost:'+app.get('port'):opts.vars.site_url);
 
 require('./app/router.js')(app, passport);
 require('./app/io.js')(io);

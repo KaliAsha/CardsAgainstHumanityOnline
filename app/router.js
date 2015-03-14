@@ -46,10 +46,13 @@ module.exports = function(app, passport){
 
   // ROUTE
 
-  app.get('/', function(req, res){
+  function indexRender = function(req, res){
     //res.locals.user = req.user || null;
-    res.render('index', {server_url: __server_ip});
+    res.render('index');
   });
+
+  app.get('/', indexRender);
+  app.get('/room/:id', indexRender);
 
   app.get('/auth/twitter', passport.authenticate('twitter'));
 
