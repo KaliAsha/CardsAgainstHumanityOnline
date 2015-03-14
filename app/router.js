@@ -9,6 +9,7 @@ var users = new Array();
 var rooms = new Array();
 
 module.exports = function(app, passport){
+  
   // PASSPORT
 
   passport.serializeUser(function(user, done) {
@@ -47,7 +48,6 @@ module.exports = function(app, passport){
   // ROUTE
 
   var indexRender = function(req, res){
-    //res.locals.user = req.user || null;
     res.render('index');
   }
 
