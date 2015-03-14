@@ -3,26 +3,25 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<meta name="mobile-web-app-capable" content="yes">
-		<meta name="theme-color" content="black">
+		<meta name="mobile-web-app-capable" content="yes" />
+		<meta name="theme-color" content="black" />
 		<title>CardsAgainstHumanityOnline</title>
 		<link rel="stylesheet" href="css/style.css" />
-		<link rel="stylesheet" href="css/icons.css">
 		<link rel="icon" type="image/png" href="#.png" />
 		<!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="#.ico" /><![endif]-->
 		<script src="bower/angular/angular.min.js"></script>
 		<script src="js/app.js"></script>
 	</head>
-
+	
 	<body ng-controller="CAHIndex">
 		<section class="menu">
 			<nav>
 				<ul class="back" ng-show="currPage !== 'index'">
-					<li><a href="#" class="icon-back" title="Retour" ng-click="backToIndex"></a></li>
+					<li><a href="#" class="icon-back" title="Retour" ng-click="backToIndex"><span class="none">Retour</a></li>
 				</ul>
 				<ul class="player_info">
 					<li class="player_name">Salut <span>Player2</span> !</li>
-					<li><a href="#" class="icon-off" title="Déconnexion"></a></li>
+					<li><a href="#" class="icon-off" title="Déconnexion"><span class="none">Déconnexion</span></a></li>
 				</ul>
 			</nav>
 		</section>
@@ -32,26 +31,24 @@
 				<div class="cards_black"></div>
 			</aside>
 			<ul>
-				<li><h1 class="logo">CardAgainstHumanityOnline</h1></li>
+				<li><h1>CardAgainstHumanityOnline</h1></li>
 				<li class="li"><a href="#" class="rules">Règles du jeu</a><span> - </span></li>
 				<li class="li"><a href="#" class="create_room">Créer une salle</a></li>
 			</ul>
 		</section>
 		<section class="rooms" ng-show="!loading && currPage === 'index'">
 			<table>
-				<tr class="hover">
+				<tr>
 					<th>ID</th>
 					<th>Nom</th>
 					<th>Créateur</th>
 					<th>Nb de joueurs</th>
-					<!--<th>Disponibilité</th>-->
 				</tr>
-				<tr ng-repeat="room in rooms">
+				<tr tabindex="0" ng-repeat="room in rooms">
 					<td data-title="ID">{{ room._id }}</td>
 					<td data-title="Nom">{{ room.name }}</td>
 					<td data-title="Créateur">{{ room.creator }}</td>
 					<td data-title="Nb de joueurs">{{ room.players.length }}</td>
-					<!--<td data-title="Disponibilité">{{ true }}</td>-->
 				</tr>
 			</table>
 		</section>
@@ -68,7 +65,7 @@
 					<li>player4</li>
 					<li>player5</li>
 				</ul>
-				<ul class="points">
+				<ul>
 					<li>15pts</li>
 					<li>2pts</li>
 					<li>10pts</li>
@@ -78,21 +75,21 @@
 			</aside>
 			<h1 class="round">Round 3</h1>
 			<h2 class="ask_player">Player3 vous pose une question :</h2>
-			<p class="ask"><span class="border">┌</span>#42 - Flagrans et enim speculationibus respectu vesania sollemni ferrum agiliter celeri ?<span class="border1">┘</span></p>
+			<p class="ask">#42 - Flagrans et enim speculationibus respectu vesania sollemni ferrum agiliter celeri ?</p>
 		</section>
 		<section class="replies" ng-show="!loading && currPage === 'room'">
 			<h3 class="choice">Choisir une réponse :</h3>
 			<ul>
-				<li class="reply">Flagrans et enim speculationibus respectu vesania sollemni ferrum agiliter celeri</li>
-				<li class="reply">Flagrans et enim speculationibus respectu vesania sollemni ferrum agiliter celeri</li>
-				<li class="reply">Flagrans et enim speculationibus respectu vesania sollemni ferrum agiliter celeri</li>
-				<li class="reply">Flagrans et enim speculationibus respectu vesania sollemni ferrum agiliter celeri</li>
-				<li class="reply">Flagrans et enim speculationibus respectu vesania sollemni ferrum agiliter celeri</li>
-				<li class="reply">Flagrans et enim speculationibus respectu vesania sollemni ferrum agiliter celeri</li>
-				<li class="reply">Flagrans et enim speculationibus respectu vesania sollemni ferrum agiliter celeri</li>
-				<li class="reply">Flagrans et enim speculationibus respectu vesania sollemni ferrum agiliter celeri</li>
-				<li class="reply">Flagrans et enim speculationibus respectu vesania sollemni ferrum agiliter celeri</li>
-				<li class="reply">Flagrans et enim speculationibus respectu vesania sollemni ferrum agiliter celeri</li>
+				<li tabindex="0">Flagrans et enim speculationibus respectu vesania sollemni ferrum agiliter celeri</li>
+				<li tabindex="0">Flagrans et enim speculationibus respectu vesania sollemni ferrum agiliter celeri</li>
+				<li tabindex="0">Flagrans et enim speculationibus respectu vesania sollemni ferrum agiliter celeri</li>
+				<li tabindex="0">Flagrans et enim speculationibus respectu vesania sollemni ferrum agiliter celeri</li>
+				<li tabindex="0">Flagrans et enim speculationibus respectu vesania sollemni ferrum agiliter celeri</li>
+				<li tabindex="0">Flagrans et enim speculationibus respectu vesania sollemni ferrum agiliter celeri</li>
+				<li tabindex="0">Flagrans et enim speculationibus respectu vesania sollemni ferrum agiliter celeri</li>
+				<li tabindex="0">Flagrans et enim speculationibus respectu vesania sollemni ferrum agiliter celeri</li>
+				<li tabindex="0">Flagrans et enim speculationibus respectu vesania sollemni ferrum agiliter celeri</li>
+				<li tabindex="0">Flagrans et enim speculationibus respectu vesania sollemni ferrum agiliter celeri</li>
 			</ul>
 			<input type="button" value="Envoyer" />
 		</section>
