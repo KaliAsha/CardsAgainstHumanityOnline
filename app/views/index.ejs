@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="CAHApp">
+<html ng-app="CAHApp" ng-controller="MainController">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -10,10 +10,15 @@
 		<link rel="icon" type="image/png" href="#.png" />
 		<!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="#.ico" /><![endif]-->
 		<script src="bower/angular/angular.min.js"></script>
+		<script src="bower/angular-route/angular-route.min.js"></script>
+		<script type="text/javascript">
+			angular.element(document.getElementsByTagName('head')).append(angular.element('<base href="' + window.location.pathname + '" />'));
+		</script>
 		<script src="js/app.js"></script>
 	</head>
 	
-	<body ng-controller="CAHIndex">
+	<body >
+	<div ng-view></div>
 		<section class="menu">
 			<nav>
 				<ul class="back" ng-show="currPage !== 'index'">
