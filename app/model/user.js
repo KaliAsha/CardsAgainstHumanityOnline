@@ -8,7 +8,7 @@ function User(args, cb){
     this.username = args.username;
     this.avatar = args.avatar;
 
-    console.log(this._id, typeof this._id);
+    //console.log(this._id, typeof this._id);
 
     /*this.game = {
         cards: new Array(),
@@ -20,11 +20,13 @@ function User(args, cb){
 
     global.mongo.collections.users.findById(this._id, function(error, results) {
         if(!results){
+            console.log(global.df.logtime()+"  @"+self.username+" ("+self._id+") created in db");
             self.stats = {
                 playedGames : 0,
                 wonGames : 0
             };
         }else{
+            console.log(global.df.logtime()+" @"+self.username+" ("+self._id+") found in db");
             self.stats = results.stats;
         }
 

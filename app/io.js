@@ -3,8 +3,8 @@ module.exports = function(io){
 
   io.sockets.on('connection', function (socket) {
     var room;
-    var address = socket.handshake.address;
-    console.log("["+df.strftime(new Date(), '%T')+"] New connection from " + address.address);
+    var address = socket.request.connection.remoteAddress;
+    console.log("["+df.strftime(new Date(), '%T')+"] New connection from " + address);
     //console.log(io.sockets);
 
     socket.on('music_ready', function(){

@@ -7,8 +7,8 @@
 		<meta name="theme-color" content="black" />
 		<title>CardsAgainstHumanityOnline</title>
 		<link rel="stylesheet" href="css/style.css" />
-		<link rel="icon" type="image/png" href="#.png" />
-		<!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="#.ico" /><![endif]-->
+		<link rel="icon" type="image/png" href="images/#.png" />
+		<!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="images/#.ico" /><![endif]-->
 		<script src="bower/angular/angular.min.js"></script>
 		<script src="bower/angular-route/angular-route.min.js"></script>
 		<script type="text/javascript">
@@ -17,7 +17,7 @@
 		<script src="js/app.js"></script>
 	</head>
 	
-	<body >
+	<body>
 	<div ng-view></div>
 		<section class="menu">
 			<nav>
@@ -26,15 +26,13 @@
 				</ul>
 				<ul class="player_info">
 					<li class="player_name">Salut <span>Player2</span> !</li>
+					<li><img src="images/profile.png" alt="Photo de profile" /></li>
 					<li><a href="#" class="icon-off" title="Déconnexion"><span class="none">Déconnexion</span></a></li>
 				</ul>
 			</nav>
 		</section>
 		<section class="header" ng-show="currPage === 'index'">
-			<aside>
-				<div class="card_white"></div>
-				<div class="card_black"></div>
-			</aside>
+			<img src="images/logo.svg" alt="Logo CardsAgainstHumanityOnline" />
 			<ul>
 				<li><h1>CardAgainstHumanityOnline</h1></li>
 				<li class="li"><a href="#" class="rules">Règles du jeu</a><span> - </span></li>
