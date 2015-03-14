@@ -7,7 +7,7 @@ app.controller('CAHIndex', ['$scope', '$interval', function($scope, $interval){
 	$scope.loading  = true;
 
 
-	var socket = io.connect(server_url);
+	var socket = io.connect();
 	socket.on('connect', function(){
 		console.log('Connected.');
 		$scope.loading  = false;
@@ -19,7 +19,10 @@ app.controller('CAHIndex', ['$scope', '$interval', function($scope, $interval){
 	socket.on('custom_event', function(data){
 		console.log('custom_event', data);
 	});
-
-	console.log(server_url);
+	
+  console.log(server_url);
 
 }])
+.config(['$locationProvider', function($locationProvider) {
+  $locationProvider.html5Mode(true);
+}]);
