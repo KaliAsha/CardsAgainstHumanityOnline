@@ -12,7 +12,6 @@ function Ticker(ds){
     };
 
     this.tick = function(cb){
-        console.log("tick");
         cb(null);
     };
 
@@ -20,3 +19,5 @@ function Ticker(ds){
         clearInterval(this.interval);
     };
 }
+
+module.exports = Ticker;
