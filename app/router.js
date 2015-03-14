@@ -46,10 +46,10 @@ module.exports = function(app, passport){
 
   // ROUTE
 
-  function indexRender = function(req, res){
+  var indexRender = function(req, res){
     //res.locals.user = req.user || null;
     res.render('index');
-  });
+  }
 
   app.get('/', indexRender);
   app.get('/room/:id', indexRender);
